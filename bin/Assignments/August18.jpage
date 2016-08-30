@@ -1,0 +1,11 @@
+java.util.hashMap<String, Integer> items = new java.util.HashMap<String, Integer>();
+items.put("A", 10);
+items.put("B", 20);
+items.put("C", 30);
+items.put("D", 40);
+items.put("E", 50);
+items.put("F", 60);
+
+for (java.util.Map.Entry<String, Integer> entry : items.entrySet()) {
+	System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
+}
