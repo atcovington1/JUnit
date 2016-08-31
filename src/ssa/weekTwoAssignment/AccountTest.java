@@ -28,16 +28,17 @@ public class AccountTest {
 		assertEquals(100, anAccount.getBalance(),0);
 		}
 		
-		public void testDeposit(){
+		public void testDepositWithdrawal(){
 		double testDeposit =5.00;		
 		anAccount.deposit(5.00);	
 		assertEquals(5.00, anAccount.getBalance(), 0.005);
-		}
-		
-		public void testWithdrawal(){
-			double testWithdraw =5.00;
-			anAccount.withdraw(5);
-			assertEquals(0.00, anAccount.getBalance(), 0.005);
+		double testWithdraw =5.00;
+		anAccount.withdraw(5);
+		assertEquals(0.00, anAccount.getBalance(), 0.005);
+		anAccount.deposit(1050.00);	
+		assertEquals(1050.00, anAccount.getBalance(), 0.005);
+		anAccount.withdraw(500);
+		assertEquals(5400.00, anAccount.getBalance(), 0.005);
 		}	
 		}
 
