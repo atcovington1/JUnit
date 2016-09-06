@@ -15,55 +15,6 @@ public class PlaySimpleCraps {
 		System.out.println();
 		
 		System.out.println("You rolled "+ 
-		
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 				
 				roll +". ");
 
@@ -88,7 +39,6 @@ public class PlaySimpleCraps {
 				dice2 = rnd.nextInt(6)+1;
 				roll = dice1 + dice2;
 				System.out.println("You rolled "+ roll +". ");
-			}
 			
 			if(roll == 7){
 				System.out.println("You Lose, Try Again!");
@@ -96,6 +46,8 @@ public class PlaySimpleCraps {
 				System.out.println("Winner, Winner, Chicken Dinner");
 			}
 		}
+		}
 	}
 }
+
 
