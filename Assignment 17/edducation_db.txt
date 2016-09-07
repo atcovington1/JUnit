@@ -1,0 +1,162 @@
+1. Major Table
+
+use tiy;
+
+drop table if exists major;
+
+create table major (
+	
+	major varchar(50),
+	
+	minimum_SAT int primary key
+    
+	);
+
+insert major (major, minimum_SAT) values('General_Business' ,800);
+
+insert major (major, minimum_SAT) values(	'Accounting', 1000);
+
+insert major (major, minimum_SAT) values(	'Finance', 1100);
+
+insert major (major, minimum_SAT) values(	'Math' , 1300);
+
+insert major (major, minimum_SAT) values(	'Engineering', 1350);
+
+insert major (major, minimum_SAT) values(	'Education', 900);
+
+insert major (major, minimum_SAT) values(	'General_Studies', 500);
+
+
+
+mysql> select * from major;
++------------------+-------------+
+| major            | minimum_SAT |
++------------------+-------------+
+| General_Studies  |         500 |
+| General_Business |         800 |
+| Education        |         900 |
+| Accounting       |        1000 |
+| Finance          |        1100 |
+| Math             |        1300 |
+| Engineering      |        1350 |
++------------------+-------------+
+7 rows in set (0.00 sec)
+
+
+***************************************************************************************************************************************************************************************************
+2. Instructors Table
+
+drop table if exists instructors;
+
+
+create table instructors (
+	
+	id int primary key auto_increment,
+    
+	last_name varchar(30) not null,
+    
+	first_name varchar(30) not null,
+    
+	major_id int,
+	
+	years_of_experience int null,
+    
+	tenured tinyint not null
+	
+	);    
+
+alter table instructors
+	
+	add constraint fk_major_id
+    	
+	foreign key (major_id) references major(major_id)
+        
+	;
+    
+
+insert instructors (last_name, first_name, major_id, years_of_experience, tenured) 
+values ('Covington', 'Aisha', 4, 3, 1);
+    
+
+mysql> select * from instructors;
++----+-----------+------------+----------+---------------------+---------+
+| id | last_name | first_name | major_id | years_of_experience | tenured |
++----+-----------+------------+----------+---------------------+---------+
+|  1 | Covington | Aisha      |        4 |                   3 |       1 |
++----+-----------+------------+----------+---------------------+---------+
+1 row in set (0.00 sec)
+
+
+***************************************************************************************************************************************************************************************************
+3.
+use tiy;
+
+drop table if exists class;
+
+
+create table class (
+
+	course_id int primary key auto_increment,
+    
+	course_name varchar(30) ,
+    
+	course_code int,
+    
+	course_instructor int
+    
+);
+    
+
+
+insert class (course_name, course_code, course_instructor) values('English', 101, 1
+
+insert class (course_name, course_code, course_instructor) values('English', 102, 2
+
+insert class (course_name, course_code, course_instructor) values('English', 103, 3
+
+insert class (course_name, course_code, course_instructor) values('English', 201, 4
+ 
+insert class (course_name, course_code, course_instructor) values('English', 202, 5
+
+insert class (course_name, course_code, course_instructor) values('English', 203, 1
+
+insert class (course_name, course_code, course_instructor) values('English', 301, 2 
+
+insert class (course_name, course_code, course_instructor) values('English', 302, 3 
+
+insert class (course_name, course_code, course_instructor) values('English', 303, 4
+
+insert class (course_name, course_id, course_instructor) values ('Math'
+insert class (course_name, course_id, course_instructor) values ('History'
+insert class (course_name, course_id, course_instructor) values ('Computer Science'
+insert class (course_name, course_id, course_instructor) values ('Education'
+
+
+
+
+
+
+
+
+
+
+
+
+***************************************************************************************************************************************************************************************************
+
+4.
+
+
+
+
+
+
+
+
+
+
+
+
+***************************************************************************************************************************************************************************************************
+
+5.
