@@ -36,7 +36,6 @@ insert major (major_name, minimum_SAT) values('General_Studies', 500);
 
 
 
-
 mysql>
 mysql> select * from major;
 +----------+------------------+-------------+
@@ -442,7 +441,8 @@ join major_class_relationship
 
 
 
-
+    
+  -- STUDENT: Sample data
 
 
 
@@ -586,5 +586,29 @@ select student.last_name, student.first_name,
 		join class
 
 		on class.id = student_class_relationship.class_id;
+
+
+
+
+
+Assignment
+
+| assignment | CREATE TABLE `assignment` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `assignment_nbr` int(11) NOT NULL,
+  `grade` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `student_id_idx` (`student_id`),
+  CONSTRAINT `assignment_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student`
+ (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+
+
+
+
+
+
 
 

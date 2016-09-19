@@ -1,0 +1,43 @@
+stmt= myConn.createstatement();
+
+
+
+ResultSet rs=stmt.executeQuery("select*from student");
+while(rs.next())
+	System.out,println("FirstName" +rs.getString("")
+
+
+
+}catch (Exception exc){
+exc.printStackTrace();
+
+}finally{
+
+	MyClose(myConn, stmt, rs) throws SQLException
+}
+}
+public static void close(Connection con, Statement stmt, ResultSet rs) throws SQLException{
+	if(con!=null)
+		con.close();
+	if(stmt !=null)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dburl=
+user =root
+password =root
