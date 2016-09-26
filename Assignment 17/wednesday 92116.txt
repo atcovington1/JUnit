@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+
+  </head>
+  <body>
+    <h1>A SIMPLE COUNTER</h1>
+
+	    <div class="box">    
+         
+        <input id="qty" value="0" />
+    	<button id="decrement" onclick="modify_qty(-1)">-</button>
+        <button id="incremental" onclick="modify_qty(1)">+</button>
+        <button id="RESET" onclick ="reset_qty(1)" />RESET</button>
+
+    </div>
+
+</body>
+</html>
+===================================================================================================
+function modify_qty(val) {
+    var qty = document.getElementById('qty').value;
+    var new_qty = parseInt(qty,10) + val;
+
+    
+    if (new_qty < 0) {
+        new_qty = 0;
+    }
+    
+    document.getElementById('qty').value = new_qty;
+    return new_qty;
+}
+function reset_qty(val) {
+    var qty = document.getElementById('qty').value;
+	document.getElementById('qty').value = "0";
+    return new_qty;	
+}
+
+=======================================================================================================================
+
+var changenbr = 1;
+var currentnbr = 0;
+$(document).ready(function() {
+	 $("#incremental").click(function() {
+    	console.log("Clicked button");
+		currentnbr = currentnbr + changenbr ;
+ 		$("#qty").text(currentnbr); 
+	  }	
+	 }
+}
